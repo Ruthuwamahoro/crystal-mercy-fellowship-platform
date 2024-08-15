@@ -1,53 +1,77 @@
+import React from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { FaArrowRight } from "react-icons/fa";
-// import { CarouselPlugin } from './ImageSlider';
+import { FaArrowRight } from 'react-icons/fa6';
 
-export const LandingPage = () => {
-    return (
-        <div className="relative w-full h-screen overflow-hidden bg-gray-900">
-            {/* Background Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-gray-800 opacity-80"></div>
+export const LandingPage: React.FC = () => {
+  return (
+    <div className="bg-white w-3/4">
+      <main className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex">
+          <div className="md:w-1/2 mb-8 md:mb-0 pr-8 flex flex-col">
+            <h1 className="text-5xl font-bold text-gray-900 leading-tight mb-4">
+              Justice begins where inequality ends
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              We're dedicated to creating a world where everyone has equal opportunities and rights.
+            </p>
+            <div className='flex'>
+              <Button variant="outline" className="bg-pink-500 text-white px-6 py-3 rounded-full hover:scale-105 transition-transform shadow-md flex">
+                          Donate now
+              </Button>
+              <Button variant="outline" className="border-pink-500 text-pink-500 px-6 py-3 mx-6 rounded-full hover:scale-105 transition-transform shadow-md">
+                  Get in touch
+                  <FaArrowRight size={15} className="ml-2" />
+              </Button>
 
-            {/* Main Content */}
-            <div className="absolute inset-0 flex flex-col justify-center text-center px-6 sm:px-12 z-10">
-                <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-7xl mx-auto space-y-12 sm:space-y-0 sm:space-x-16">
-                    
-                    {/* Left Section (Text) */}
-                    <div className="text-white sm:w-1/2">
-                        <div className="mb-8">
-                            <h1 className="text-4xl sm:text-6xl font-bold tracking-tight leading-tight mb-4">
-                                Crystal Mercy Fellowship
-                            </h1>
-                            <p className="text-lg sm:text-xl text-gray-300 max-w-lg mx-auto">
-                                Making Disciples of Jesus Christ who Love God and Love People
-                            </p>
-                        </div>
-
-                        {/* Donation & Call to Action */}
-                        <div className="bg-gray-800/80 text-white p-10 rounded-lg shadow-lg">
-                            <p className="text-sm font-bold uppercase mb-3 text-pink-400">Donate to Change Lives</p>
-                            <h2 className="text-3xl sm:text-4xl font-semibold mb-4">
-                                Lend a Helping Hand <br /> to Those in Need
-                            </h2>
-                            <p className="text-base sm:text-lg mb-8">
-                                We work to build impactful corporate social responsibility strategies that touch lives and transform communities.
-                            </p>
-                            <div className="flex justify-center space-x-4">
-                                <Button variant="outline" className="bg-pink-500 text-white px-6 py-3 rounded-full hover:scale-105 transition-transform shadow-md">
-                                    Donate now
-                                </Button>
-                                <Button variant="outline" className="border-pink-500 text-pink-500 px-6 py-3 rounded-full hover:scale-105 transition-transform shadow-md">
-                                    Get in touch
-                                    <FaArrowRight size={15} className="ml-2" />
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                    {/* <div className="sm:w-1/2">
-                        <CarouselPlugin />
-                    </div> */}
-                </div>
             </div>
+          </div>
+          <div className="md:w-1/2 relative">
+            <div className="relative w-full h-[500px]">
+              {/* Background shapes */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-orange-200 rounded-full"></div>
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-200 rounded-full"></div>
+              
+              {/* Overlapping image containers */}
+              <div className="absolute top-10 left-10 w-3/4 h-3/4 bg-white rounded-3xl overflow-hidden shadow-lg animate-float">
+                <Image 
+                  src="https://i.pinimg.com/564x/ac/2b/9b/ac2b9b9afa498ecb45b9c2ebfc09e9ef.jpg" 
+                  alt="People representing justice and equality" 
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className="absolute bottom-10 left-60 w-2/3 h-2/3 bg-white rounded-3xl overflow-hidden shadow-lg">
+                <Image 
+                  src="https://i.pinimg.com/564x/b8/30/a5/b830a56ac71b299ac5fcc0e721a3e30f.jpg" 
+                  alt="People representing justice and equality" 
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute top-5 w-10 h-10 bg-orange-400 rounded-full"></div>
+              <div className="absolute bottom-5 right-20 w-6 h-6 bg-blue-400 rounded-full"></div>
+              <div className="absolute top-1/2 right-0 w-3 h-3 bg-green-400 rounded-full"></div>
+            </div>
+          </div>
         </div>
-    );
+      </main>
+
+      <style jsx global>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+      `}</style>
+    </div>
+  );
 };

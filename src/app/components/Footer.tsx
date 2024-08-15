@@ -6,10 +6,8 @@ import { Facebook, Instagram, Youtube} from "lucide-react";
 export function FooterLinks() {
   return (
     <div className="bg-gray-900 text-gray-300 py-12">
-      {/* Top Section */}
       <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-4 gap-12">
         
-        {/* About Us */}
         <div>
           <h3 className="text-2xl font-bold text-white mb-4">About Us</h3>
           <p className="leading-relaxed mb-6">
@@ -32,7 +30,6 @@ export function FooterLinks() {
           </a>
         </div>
 
-        {/* Quick Links */}
         <div>
           <h3 className="text-2xl font-bold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2">
@@ -43,8 +40,6 @@ export function FooterLinks() {
             <li><a href="#" className="hover:text-white transition">Contact Us</a></li>
           </ul>
         </div>
-
-        {/* Resources */}
         <div>
           <h3 className="text-2xl font-bold text-white mb-4">Resources</h3>
           <ul className="space-y-2">
@@ -55,7 +50,6 @@ export function FooterLinks() {
           </ul>
         </div>
 
-        {/* Newsletter Signup */}
         <div>
           <h3 className="text-2xl font-bold text-white mb-4">Subscribe to our Newsletter</h3>
           <p className="leading-relaxed mb-6">

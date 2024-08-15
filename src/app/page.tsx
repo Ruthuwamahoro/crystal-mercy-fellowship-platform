@@ -14,7 +14,7 @@ export default function Pages() {
     <div className="flex flex-col">
       <FirstTopNav />
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center pt-10">
         <LandingPage />
       </div>
 
