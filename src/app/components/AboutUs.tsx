@@ -3,7 +3,6 @@ import * as React from "react";
 export function AboutUs() {
   return (
     <section data-aos="fade-left" className="my-16 px-6 md:px-0 w-full mx-auto">
-      {/* Section with a gradient background */}
       <div className="bg-gradient-to-r from-purple-900 bg-gray-900 rounded-lg py-12 px-6 text-white animate-fadeInSlow">
         <h2 className="text-5xl font-bold mb-8 text-center tracking-wide animate-slideInDown">
           Our Mission to Help
@@ -14,7 +13,6 @@ export function AboutUs() {
         </p>
       </div>
 
-      {/* Main content with cool hover and animation effects */}
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
         <div className="p-8 bg-gray-50 rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:scale-105 hover:bg-purple-100 animate-slideInUp">
           <h3 className="text-3xl font-semibold mb-4 text-purple-800">Our Mission</h3>
@@ -49,8 +47,6 @@ export function AboutUs() {
           </p>
         </div>
       </div>
-
-      {/* Call to Action with hover effects */}
       <div className="mt-16 text-center">
         <a href="/support-us" className="px-10 py-4 bg-pink-500 text-white text-xl font-semibold rounded-2xl transition duration-300 ease-in-out transform hover:scale-110 hover:from-blue-600 hover:to-teal-500">
           Get Involved

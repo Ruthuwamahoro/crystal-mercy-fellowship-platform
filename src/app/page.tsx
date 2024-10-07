@@ -6,14 +6,15 @@ import { LandingPage } from "./components/LandingPage";
 import { AboutUs } from "./components/AboutUs";
 import { FooterLinks } from "./components/Footer";
 import { ContactUs } from "./components/ContactUs";
+import DonationPage from "./components/DonationPage";
+import { Payment } from "./components/payment";
 
 export default function Pages() {
   return (
     <div className="flex flex-col">
       <FirstTopNav />
 
-      {/* Main Hero Section */}
-      <div className="flex flex-col items-center justify-center h-screen bg-hero-pattern bg-cover bg-center">
+      <div className="flex flex-col items-center">
         <LandingPage />
       </div>
 
@@ -44,6 +45,18 @@ export default function Pages() {
         <div className="container mx-auto px-4">
           <h2 className="text-center text-3xl font-bold mb-8">Contact Us</h2>
           <ContactUs />
+        </div>
+      </section>
+      <section className="py-10 bg-accent-light text-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-center text-3xl font-bold mb-8">Contact Us</h2>
+          <DonationPage />
+        </div>
+      </section>
+      <section className="py-10 bg-accent-light text-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-center text-3xl font-bold mb-8">Contact Us</h2>
+          <Payment />
         </div>
       </section>
 

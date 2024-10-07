@@ -1,7 +1,6 @@
 import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from 'next/image';
-import { CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -22,7 +21,7 @@ export function CarouselPlugin() {
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-full max-w-6xl mx-auto overflow-hidden rounded-lg shadow-lg"
+      className=""
     >
       <CarouselContent>
         {[
@@ -32,16 +31,14 @@ export function CarouselPlugin() {
         ].map((src, index) => (
           <CarouselItem key={index} className="relative">
             <div className="p-4 flex justify-center">
-              <div className="rounded-lg shadow-xl overflow-hidden">
-                <CardContent className="flex items-center justify-center p-0">
-                  <Image
-                    src={src}
-                    width={1200}
-                    height={800}
-                    alt={`Image ${index + 1}`}
-                    className="object-cover w-full h-[400px] md:h-[600px] rounded-l-full"
-                  />
-                </CardContent>
+              <div className="w-full h-[400px] md:h-[600px]">
+                <Image
+                  src={src}
+                  alt={`Image ${index + 1}`}
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </CarouselItem>
