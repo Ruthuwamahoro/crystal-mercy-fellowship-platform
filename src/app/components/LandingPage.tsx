@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { FaArrowRight } from "react-icons/fa";
-import { CarouselPlugin } from './ImageSlider';
+// import { CarouselPlugin } from './ImageSlider';
 
 export const LandingPage = () => {
     return (
