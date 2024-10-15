@@ -43,9 +43,9 @@ export const LandingPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="sm:w-1/2">
+                    {/* <div className="sm:w-1/2">
                         <CarouselPlugin />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
