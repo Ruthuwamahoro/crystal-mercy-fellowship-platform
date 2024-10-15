@@ -2,7 +2,7 @@ import { BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
 import { TbBrandYoutubeFilled } from "react-icons/tb";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoIosArrowUp } from "react-icons/io";
-
+import { Facebook, Instagram, Youtube} from "lucide-react";
 export function FooterLinks() {
   return (
     <div className="bg-gray-900 text-gray-300 py-12">
@@ -16,6 +16,17 @@ export function FooterLinks() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
             lacinia odio vitae vestibulum. Nullam venenatis mi nec libero.
           </p>
+          <div className="flex space-x-4">
+                    <a href="#" className="bg-gray-800 p-2 rounded-full transition hover:bg-gray-700">
+                        <Facebook className="text-white" size={20} />
+                    </a>
+                    <a href="#" className="bg-gray-800 p-2 rounded-full transition hover:bg-gray-700">
+                        <Instagram className="text-white" size={20} />
+                    </a>
+                    <a href="#" className="bg-gray-800 p-2 rounded-full transition hover:bg-gray-700">
+                        <Youtube className="text-white" size={20} />
+                    </a>
+                </div>
           <a href="#" className="inline-block text-sm text-pink-500 hover:text-pink-400">
             Read More &rarr;
           </a>

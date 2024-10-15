@@ -6,8 +6,8 @@ import { LandingPage } from "./components/LandingPage";
 import { AboutUs } from "./components/AboutUs";
 import { FooterLinks } from "./components/Footer";
 import { ContactUs } from "./components/ContactUs";
-import DonationPage from "./components/DonationPage";
 import { Payment } from "./components/payment";
+import DonationPage from "./components/donation";
 
 export default function Pages() {
   return (
@@ -40,27 +40,27 @@ export default function Pages() {
         </div>
       </section>
 
-      {/* Contact Us Section */}
-      <section className="py-10 bg-accent-light text-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-center text-3xl font-bold mb-8">Contact Us</h2>
-          <ContactUs />
-        </div>
-      </section>
-      <section className="py-10 bg-accent-light text-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-center text-3xl font-bold mb-8">Contact Us</h2>
-          <DonationPage />
-        </div>
-      </section>
-      <section className="py-10 bg-accent-light text-white">
+      <div className="bg-gray-100">
+        <section className="bg-accent-light text-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-center text-3xl font-bold pt-10 text-black italic ">Lets Make a Difference Together</h2>
+            <DonationPage />
+          </div>
+        </section>
+        <section className="py-10 bg-accent-light text-white">
+          <div className="container mx-auto px-4">
+            <ContactUs />
+          </div>
+        </section>
+
+      </div>
+      {/* <section className="py-10 bg-accent-light text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-center text-3xl font-bold mb-8">Contact Us</h2>
           <Payment />
         </div>
-      </section>
+      </section> */}
 
-      {/* Footer Section */}
       <FooterLinks />
     </div>
   );

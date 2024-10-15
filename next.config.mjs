@@ -11,6 +11,11 @@ const nextConfig = {
           hostname: 'images.cdn-files-a.com',
           pathname: '**',
         },
+        {
+          protocol: 'https',
+          hostname: 'static.vecteezy.com',
+          pathname: '**',
+        },
       ],
     },
   };  
