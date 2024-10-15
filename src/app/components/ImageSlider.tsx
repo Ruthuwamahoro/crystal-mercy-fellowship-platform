@@ -35,7 +35,8 @@ export function CarouselPlugin() {
               <Image
                   src={src}
                   alt={`Image ${index + 1}`}
-                  layout="fill"
+                  width={100}
+                  height={100}
                   objectFit="cover"
                   className="rounded-lg shadow-xl object-cover transition-all duration-500 ease-in-out opacity-80 hover:opacity-100 hover:scale-105 hover:shadow-2xl"
                   // style={{
