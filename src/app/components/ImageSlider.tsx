@@ -38,9 +38,9 @@ export function CarouselPlugin() {
                   layout="fill"
                   objectFit="cover"
                   className="rounded-lg shadow-xl object-cover transition-all duration-500 ease-in-out opacity-80 hover:opacity-100 hover:scale-105 hover:shadow-2xl"
-                  style={{
-                      clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 98% 100%, 50% 98%)',
-                  }}
+                  // style={{
+                  //     clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 98% 100%, 50% 98%)',
+                  // }}
               />
 
               </div>

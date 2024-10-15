@@ -30,12 +30,11 @@ const DonationPage = () => {
   return (
     <div className="min-h-screen text-gray-800 flex items-center justify-center p-4 bg-gray-100" data-aos="fade-up">
       <div className="max-w-6xl w-full flex flex-col lg:flex-row bg-white rounded-3xl shadow-2xl overflow-hidden">
-        {/* Left side with image and overlay text */}
         <div className="lg:w-3/5 relative">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url('/api/placeholder/1024/768')`, // Replace with actual image URL
+              backgroundImage: `url(https://i.pinimg.com/564x/d3/6d/40/d36d402277c4a3e80405d8983e06467b.jpg)`, // Replace with actual image URL
               filter: 'brightness(50%)'
             }}
           ></div>
