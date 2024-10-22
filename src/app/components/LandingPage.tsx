@@ -3,19 +3,19 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { FaArrowRight } from 'react-icons/fa6';
 import { ImageCarousel } from '@/app/components/ImageSlider'
-import { ButtonHover1 } from '@/app/components/Button'
+import { ButtonHover1, ButtonHover11 } from '@/app/components/Button'
 
 export const LandingPage: React.FC = () => {
   return (
     <div className="bg-white w-3/4">
       <main className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex">
+        <div className="flex items-center">
           <div className="md:w-1/2 mb-8 md:mb-0 pr-8 flex flex-col">
             <h1 className="text-5xl font-bold text-gray-900 leading-tight mb-4">
               Justice begins where inequality ends
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              We're dedicated to creating a world where everyone has equal opportunities and rights.
+              We&lsquo;re dedicated to creating a world where everyone has equal opportunities and rights.
             </p>
             <div className='flex'>
               {/* <Button variant="outline" className="bg-pink-500 text-white px-6 py-3 rounded-full hover:scale-105 transition-transform shadow-md flex hover:bg-gray-500 hover:text-white">
@@ -23,10 +23,11 @@ export const LandingPage: React.FC = () => {
               </Button> */}
               <ButtonHover1 />
               
-              <Button variant="outline" className="border-pink-500 text-pink-500 px-6 py-3 mx-6 rounded-full hover:scale-105 transition-transform shadow-md">
+              {/* <Button variant="outline" className="border-pink-500 text-pink-500 px-6 py-3 mx-6 rounded-full hover:scale-105 transition-transform shadow-md">
                   Get in touch
                   <FaArrowRight size={15} className="ml-2" />
-              </Button>
+              </Button> */}
+              <ButtonHover11 />
 
             </div>
           </div>

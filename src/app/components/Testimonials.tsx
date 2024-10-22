@@ -66,14 +66,13 @@ export function Testimonials() {
         </div>
       </div>
 
-      {/* Dots for navigation */}
       <div className="flex justify-center mt-6 space-x-2">
         {[0, 1, 2].map((dotIndex) => (
           <GoDot
             key={dotIndex}
             size={30}
             className={`cursor-pointer ${
-              currentSlide === dotIndex ? "text-blue-500" : "text-gray-400"
+              currentSlide === dotIndex ? "text-pink-500" : "text-gray-400"
             }`}
             onClick={() => setCurrentSlide(dotIndex)}
           />

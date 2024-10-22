@@ -3,6 +3,8 @@ import { TbBrandYoutubeFilled } from "react-icons/tb";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoIosArrowUp } from "react-icons/io";
 import { Facebook, Instagram, Youtube} from "lucide-react";
+import { FloatingChatButton } from "./Button";
+
 export function FooterLinks() {
   return (
     <div className="bg-gray-900 text-gray-300 py-12">
@@ -108,6 +110,9 @@ export function FooterLinks() {
         >
           <IoIosArrowUp className="w-6 h-6" />
         </button>
+      </div>
+      <div>
+        <FloatingChatButton />
       </div>
     </div>
   );
