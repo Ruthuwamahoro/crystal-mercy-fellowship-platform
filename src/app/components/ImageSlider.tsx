@@ -1,53 +1,50 @@
-// import * as React from "react";
-// import Autoplay from "embla-carousel-autoplay";
-// import Image from 'next/image';
-// import {
-//   Carousel,
-//   CarouselContent,
-//   CarouselItem,
-// } from "@/components/ui/carousel";
+import React from 'react';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 
-// export function CarouselPlugin() {
-//   const plugin = React.useRef(
-//     Autoplay({ delay: 5000, stopOnInteraction: true })
-//   );
+export const ImageCarousel = () => {
+  return (
+    <>
+      <svg className="clipppy absolute -top-[999px] -left-[999px] w-0 h-0">
+        <defs>
+          <clipPath id="clip-splash1" clipPathUnits="objectBoundingBox">
+            <path d="M0.0271455 0.648845C0.0980831 0.726913 0.10439 0.612222 0.133616 0.610068C0.154217 0.599231 0.173485 0.615134 0.192072 0.631611L0.148231 0.743636L0.200423 0.726401L0.231738 0.769487L0.296457 0.808265V0.877204L0.325684 0.844889C0.327541 0.913991 0.325223 0.959549 0.354912 0.971994C0.38089 0.950581 0.378584 0.915999 0.367438 0.844889C0.380174 0.863793 0.390393 0.87106 0.413367 0.877204C0.420514 0.860977 0.424888 0.852387 0.438419 0.844889C0.458266 0.852916 0.462024 0.865571 0.459296 0.898747C0.490595 0.898419 0.495791 0.880353 0.496874 0.836271C0.517745 0.836271 0.565222 0.854871 0.605434 0.836271C0.639053 0.802207 0.628393 0.780259 0.645094 0.750099C0.661795 0.719938 0.739045 0.816883 0.764097 0.756562C0.771103 0.7317 0.754069 0.720928 0.701461 0.704858C0.722789 0.665743 0.731631 0.652635 0.711905 0.648845L0.697292 0.66608C0.677383 0.665498 0.67086 0.661038 0.663889 0.648845L0.722344 0.612222C0.738823 0.590168 0.74419 0.578187 0.739045 0.558364C0.728706 0.559406 0.722747 0.557452 0.711905 0.547592C0.713016 0.539063 0.71569 0.534982 0.728607 0.530358C0.714079 0.509087 0.710722 0.49827 0.711905 0.480808L0.793319 0.418333C0.809469 0.398149 0.818013 0.391049 0.805851 0.366629C0.787535 0.343541 0.776718 0.341086 0.755747 0.366629C0.740729 0.407633 0.730153 0.424274 0.703555 0.431259C0.69278 0.428498 0.688042 0.425127 0.684766 0.41187C0.704085 0.378025 0.712442 0.372249 0.703555 0.366629C0.686706 0.356502 0.675741 0.366294 0.655538 0.390327C0.661795 0.310617 0.707724 0.280456 0.684766 0.248142C0.65514 0.21475 0.64535 0.284489 0.62631 0.38171C0.617082 0.382729 0.612139 0.381652 0.605434 0.366629C0.610766 0.334832 0.612381 0.319976 0.605434 0.314926C0.590989 0.315945 0.58044 0.326348 0.561592 0.345086C0.545766 0.3405 0.539608 0.331576 0.53654 0.297691L0.561592 0.230907C0.560557 0.180006 0.53654 0.151197 0.496874 0.151197C0.438413 0.151202 0.419719 0.166418 0.396665 0.230907C0.382046 0.282611 0.402507 0.300966 0.386227 0.334314C0.308977 0.338623 0.31524 0.258913 0.296457 0.269685C0.282557 0.279751 0.286621 0.29547 0.296457 0.325697C0.282918 0.334813 0.275861 0.333226 0.265141 0.306308C0.260005 0.265229 0.256703 0.243243 0.231738 0.25245C0.213308 0.265273 0.215877 0.278447 0.24844 0.314926C0.259823 0.32449 0.255881 0.337956 0.24844 0.362321C0.213743 0.362228 0.198963 0.359177 0.192072 0.366629C0.164927 0.38171 0.202505 0.409716 0.177453 0.474345C0.122214 0.472037 0.101714 0.4691 0.0856006 0.478654C0.112479 0.485945 0.126886 0.491281 0.148231 0.508815C0.143245 0.539187 0.132942 0.549364 0.10439 0.558364C0.0284494 0.578268 -0.00417535 0.614376 0.0271455 0.648845Z" />
+          </clipPath>
+        </defs>
+      </svg>
 
-//   React.useEffect(() => {
-//     if (plugin.current) {
-//       console.log("Autoplay plugin initialized");
-//     }
-//   }, []);
+      <div className="grid gap-8 dark:bg-black bg-white rounded-lg p-5">
+        <div className="relative w-full max-w-md mx-auto aspect-square">
+          <div 
+            className="absolute inset-0"
+            style={{ clipPath: 'url(#clip-splash1)' }}
+          >
+            <Carousel className="h-full w-full" opts={{ align: "start", loop: true }}>
+              <CarouselContent className="h-full">
+                  <CarouselItem className="h-full">
+                    <div className="relative h-full group overflow-hidden">
+                      <img
+                        src="https://i.pinimg.com/564x/b8/30/a5/b830a56ac71b299ac5fcc0e721a3e30f.jpg"
+                        alt= 'Carousel image' 
+                        className="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110"
+                      />
+                    </div>
+                  </CarouselItem>
+              </CarouselContent>
+            </Carousel>
+          </div>
+        </div>
+      </div>
 
-//   return (
-//     <Carousel
-//       plugins={[plugin.current]}
-//       className=""
-//     >
-//       <CarouselContent>
-//         {[
-//           "https://i.pinimg.com/originals/27/7d/b8/277db862272d857e336605fb44d4eb9e.jpg",
-//           "https://i.pinimg.com/564x/b8/30/a5/b830a56ac71b299ac5fcc0e721a3e30f.jpg",
-//           // "https://i.pinimg.com/564x/7d/77/2c/7d772c85e491e2ef4e89499dc90220ff.jpg",
-//         ].map((src, index) => (
-//           <CarouselItem key={index} className="relative">
-//             <div className="p-4 flex justify-center">
-//               <div className="w-full h-[400px] md:h-[600px]">
-//               <Image
-//                   src={src}
-//                   alt={`Image ${index + 1}`}
-//                   layout="fill"
-//                   objectFit="cover"
-//                   className="rounded-lg shadow-xl object-cover transition-all duration-500 ease-in-out opacity-80 hover:opacity-100 hover:scale-105 hover:shadow-2xl"
-//                   style={{
-//                       clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 98% 100%, 50% 98%)',
-//                   }}
-//               />
-
-//               </div>
-//             </div>
-//           </CarouselItem>
-//         ))}
-//       </CarouselContent>
-//     </Carousel>
-//   );
-// }
+      <style jsx global>{`
+        @keyframes carousel {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-100%);
+          }
+        }
+      `}</style>
+    </>
+  );
+};

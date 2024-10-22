@@ -3,12 +3,12 @@ import * as React from "react";
 export function AboutUs() {
   return (
     <section data-aos="fade-left" className="my-16 px-6 md:px-0 w-full mx-auto">
-      <div className="bg-gray-900 rounded-lg py-12 px-6 text-white animate-fadeInSlow">
+      <div className="bg-gray-200 rounded-lg py-12 px-6 text-black animate-fadeInSlow">
         <h2 className="text-5xl font-bold mb-8 text-center tracking-wide animate-slideInDown">
           Our Mission to Help
         </h2>
         <p className="text-xl leading-relaxed max-w-3xl mx-auto text-center animate-fadeInSlow">
-          Welcome to <span className="font-semibold">[Your Organization]</span>, where every child’s future is our priority, and every sermon spreads the light of hope. 
+          Welcome to <span className="font-semibold">Crystal Mercy Fellowship</span>, where every child’s future is our priority, and every sermon spreads the light of hope. 
           We believe in empowering communities by supporting the next generation and spreading the teachings of compassion and faith.
         </p>
       </div>
@@ -42,13 +42,13 @@ export function AboutUs() {
         <div className="p-8 bg-gray-50 rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:scale-105 hover:bg-blue-100 animate-slideInUp">
           <h3 className="text-3xl font-semibold mb-4 text-gray-900">Why Support Us</h3>
           <p className="text-lg leading-relaxed text-gray-700">
-            By supporting <span className="font-semibold text-gray-900">[Your Organization]</span>, you are not only helping children in need but also spreading faith and hope to entire communities. 
+            By supporting <span className="font-semibold text-gray-900">Crystal Mercy Fellowship</span>, you are not only helping children in need but also spreading faith and hope to entire communities. 
             Together, we can make a profound impact in the lives of those who need it most.
           </p>
         </div>
       </div>
       <div className="mt-16 text-center">
-        <a href="/support-us" className="px-10 py-4 bg-pink-500 text-white text-xl font-semibold rounded-2xl transition duration-300 ease-in-out transform hover:scale-110 hover:from-blue-600 hover:to-teal-500">
+        <a href="/support-us" className="px-10 py-4 bg-pink-500 text-white text-xl font-semibold rounded-2xl transition duration-300 ease-in-out transform hover:scale-110 hover:from-blue-600 hover:to-teal-500 hover:bg-gray-500 hover:text-white">
           Get Involved
         </a>
       </div>

@@ -91,7 +91,7 @@ export function ContactForm() {
             <CardFooter className="pt-8">
             <Button
                 type="submit"
-                className="w-full bg-gray-800 text-white py-3 px-5 font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl  hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-xl"
+                className="w-full bg-pink-500 text-white py-3 px-5 font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl  hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-xl"
             >
                 Send Message
             </Button>

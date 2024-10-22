@@ -4,12 +4,12 @@ import { GoDot } from "react-icons/go";
 import Image from "next/image";
 
 const testimonials = [
-  { name: "John Doe", image: "https://i.pinimg.com/564x/62/98/d3/6298d39b50429bfc626e68fad02d9b12.jpg", quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ad, amet voluptas praesentium suscipit debitis voluptatibus, iure eveniet cupiditate aperiam!" },
-  { name: "Jane Smith", image: "https://i.pinimg.com/564x/62/98/d3/6298d39b50429bfc626e68fad02d9b12.jpg", quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ad, amet voluptas praesentium suscipit debitis voluptatibus, iure eveniet cupiditate aperiam!" },
-  { name: "Alice Brown", image: "https://i.pinimg.com/564x/62/98/d3/6298d39b50429bfc626e68fad02d9b12.jpg", quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ad, amet voluptas praesentium suscipit debitis voluptatibus, iure eveniet cupiditate aperiam!" },
-  { name: "Bob Johnson", image: "https://i.pinimg.com/564x/62/98/d3/6298d39b50429bfc626e68fad02d9b12.jpg", quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ad, amet voluptas praesentium suscipit debitis voluptatibus, iure eveniet cupiditate aperiam!" },
-  { name: "Charlie Lee", image: "https://i.pinimg.com/564x/62/98/d3/6298d39b50429bfc626e68fad02d9b12.jpg", quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ad, amet voluptas praesentium suscipit debitis voluptatibus, iure eveniet cupiditate aperiam!" },
-  { name: "Diana White", image: "https://i.pinimg.com/564x/62/98/d3/6298d39b50429bfc626e68fad02d9b12.jpg", quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ad, amet voluptas praesentium suscipit debitis voluptatibus, iure eveniet cupiditate aperiam!" }
+  { name: "Aline Ikuzwe", image: "https://i.pinimg.com/564x/cb/c4/0a/cbc40a7e9a2c5afb2649621f523e18f4.jpg", quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ad, amet voluptas praesentium suscipit debitis voluptatibus, iure eveniet cupiditate aperiam!" },
+  { name: "Ange Uwimana", image: "https://i.pinimg.com/enabled_lo/564x/81/58/04/815804fc1979d317a7a70686fdcc1f20.jpg", quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ad, amet voluptas praesentium suscipit debitis voluptatibus, iure eveniet cupiditate aperiam!" },
+  { name: "Robert Kwizera", image: "https://i.pinimg.com/564x/62/98/d3/6298d39b50429bfc626e68fad02d9b12.jpg", quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ad, amet voluptas praesentium suscipit debitis voluptatibus, iure eveniet cupiditate aperiam!" },
+  { name: "Iradukunda Johnson", image: "https://i.pinimg.com/564x/62/98/d3/6298d39b50429bfc626e68fad02d9b12.jpg", quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ad, amet voluptas praesentium suscipit debitis voluptatibus, iure eveniet cupiditate aperiam!" },
+  { name: "Bizimana Charlie", image: "https://i.pinimg.com/564x/62/98/d3/6298d39b50429bfc626e68fad02d9b12.jpg", quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ad, amet voluptas praesentium suscipit debitis voluptatibus, iure eveniet cupiditate aperiam!" },
+  { name: "Uwase Diana", image: "https://i.pinimg.com/564x/62/98/d3/6298d39b50429bfc626e68fad02d9b12.jpg", quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ad, amet voluptas praesentium suscipit debitis voluptatibus, iure eveniet cupiditate aperiam!" }
 ];
 
 export function Testimonials() {
@@ -53,7 +53,7 @@ export function Testimonials() {
                   className="w-36 h-36 rounded-full object-cover shadow-lg border-4 border-blue-500"
                 />
                 <div className="text-left">
-                  <h6 className="text-lg font-bold">{testimonial.name}</h6>
+                  <h6 className="text-lg font-bold text-gray-800">{testimonial.name}</h6>
                   <hr className="w-20 border-gray-300 my-2" />
                   <blockquote className="text-gray-600 italic max-w-xs leading-relaxed">
                     “{testimonial.quote}”
