@@ -102,7 +102,6 @@ export function FooterLinks() {
         </div>
       </div>
 
-      {/* Back to Top Button */}
       <div className="container mx-auto px-6 md:px-12 flex justify-center mt-8">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

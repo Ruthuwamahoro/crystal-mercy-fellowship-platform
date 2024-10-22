@@ -103,7 +103,7 @@ export const FloatingChatButton = () => {
 
   // Function to scroll to bottom of chat
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" }) as any;
   };
 
   useEffect(() => {
@@ -111,7 +111,7 @@ export const FloatingChatButton = () => {
   }, [chatHistory]);
 
   // Simulated AI response generation
-  const generateAIResponse = async (userMessage) => {
+  const generateAIResponse = async (userMessage:any) => {
     // This is where you'd integrate with your AI backend
     // For now, we'll simulate some intelligent responses
     const responses = [
@@ -125,7 +125,6 @@ export const FloatingChatButton = () => {
     const randomResponse = responses[Math.floor(Math.random() * responses.length)]
       .replace('{topic}', topic);
 
-    // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 2000));
     return randomResponse;
   };
