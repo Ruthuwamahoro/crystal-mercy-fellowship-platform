@@ -3,6 +3,12 @@ import { useTheme } from 'next-themes'
 import React, { useState, useEffect, useRef } from 'react';
 import { MessageCircle, X, Send, Smile } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
+type ChatMessage = {
+  type: 'user' | 'bot';
+  message: string;
+  timestamp: string;
+};
 export const ButtonHover1 = () => {
     return (
       <>
@@ -81,12 +87,6 @@ export const ButtonHover11 = () => {
 }
 
 
-// import React, { useState } from 'react';
-// import { MessageCircle, X, Send, Smile } from 'lucide-react';
-
-
-
-
 const INITIAL_MESSAGE = {
   type: 'bot',
   message: "Hello! I'm here to help. How can I assist you today?",
@@ -97,7 +97,7 @@ export const FloatingChatButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const messagesEndRef = useRef(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null); 
   const [chatHistory, setChatHistory] = useState([INITIAL_MESSAGE]);
   const [isProcessing, setIsProcessing] = useState(false);
 
@@ -129,7 +129,7 @@ export const FloatingChatButton = () => {
     return randomResponse;
   };
 
-  const handleSendMessage = async (e) => {
+  const handleSendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!message.trim() || isProcessing) return;
 
@@ -170,7 +170,7 @@ export const FloatingChatButton = () => {
     }
   };
 
-  const MessageBubble = ({ chat }) => (
+  const MessageBubble = ({ chat }: {chat: ChatMessage}) => (
     <div className={`flex ${chat.type === 'user' ? 'justify-end' : 'justify-start'} items-start space-x-2`}>
       {chat.type === 'bot' && (
         <Avatar className="mt-1">
