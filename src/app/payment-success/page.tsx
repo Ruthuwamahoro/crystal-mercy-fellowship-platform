@@ -10,11 +10,30 @@ export default function PaymentSuccess({
                 <h2 className="text-2xl">
                     You successfully sent
                 </h2>
-                <div className="bg-white p-2 rounded-md test-purple-500 mt-5 text-4xl font-bold">
-                    ${amount}
-                </div>
             </div>
         </main>
     )
 
 }
+
+// import { Button } from "@/components/ui/button"
+// import {
+//   Dialog,
+//   DialogContent,
+//   DialogDescription,
+//   DialogFooter,
+//   DialogHeader,
+//   DialogTitle,
+//   DialogTrigger,
+// } from "@/components/ui/dialog"
+
+// export default function PaymentSuccess({children , searchParams: { amount }}: { children: React.ReactNode, searchParams: { amount: string }}) {
+//   return (
+//     <Dialog>
+//       <DialogTrigger asChild>{children}</DialogTrigger>
+//       <DialogContent className="sm:max-w-[725px] bg-white text-black">
+//         <h1>Thank you so much for your donation</h1>
+//       </DialogContent>
+//     </Dialog>
+//   )
+// }

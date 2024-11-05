@@ -2,7 +2,7 @@ import * as React from "react";
 
 export function AboutUs() {
   return (
-    <section data-aos="fade-left" className="my-16 px-6 md:px-0 w-full mx-auto">
+    <section data-aos="fade-up" className="my-16 px-6 md:px-0 w-full mx-auto">
       <div className="bg-gray-200 rounded-lg py-12 px-6 text-black animate-fadeInSlow">
         <h2 className="text-5xl font-bold mb-8 text-center tracking-wide animate-slideInDown">
           Our Mission to Help
@@ -46,11 +46,6 @@ export function AboutUs() {
             Together, we can make a profound impact in the lives of those who need it most.
           </p>
         </div>
-      </div>
-      <div className="mt-16 text-center">
-        <a href="/support-us" className="px-10 py-4 bg-pink-500 text-white text-xl font-semibold rounded-2xl transition duration-300 ease-in-out transform hover:scale-110 hover:from-blue-600 hover:to-teal-500 hover:bg-gray-500 hover:text-white">
-          Get Involved
-        </a>
       </div>
     </section>
   );

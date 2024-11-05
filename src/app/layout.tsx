@@ -17,6 +17,7 @@
 // }
 // import { ReactNode, useEffect } from 'react';
 "use client"
+import { CopilotKit } from '@copilotkit/react-core';
 import "./globals.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
@@ -32,7 +33,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="en">
-      <body className="">{children}</body>
+      <body>
+        <CopilotKit
+          runtimeUrl='https://api.copilotkit.com/v1/runtime'
+          publicApiKey='ck_pub_49341add514bd1f5e1b263594cc27490'
+        >
+          {children}
+        </CopilotKit>
+      </body>
     </html>
   );
 }

@@ -6,6 +6,7 @@ import { ImageCarousel } from '@/app/components/ImageSlider'
 import { ButtonHover1, ButtonHover11 } from '@/app/components/Button'
 
 export const LandingPage: React.FC = () => {
+
   return (
     <div className="bg-white w-3/4">
       <main className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">

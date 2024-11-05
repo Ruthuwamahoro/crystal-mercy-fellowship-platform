@@ -27,7 +27,6 @@ const CheckoutPage = ({amount}: {amount: number}) => {
         .then((data) => {
             setClientSecret(data.clientSecret)
         })
-
     }, [amount])
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -74,11 +73,11 @@ const CheckoutPage = ({amount}: {amount: number}) => {
     }
     return(
         <form onSubmit={handleSubmit} action="">
-            {clientSecret && <PaymentElement/>}
+            {clientSecret && <PaymentElement className="w-[500px] rounded-3xl"/>}
             {errorMessage && <div>{errorMessage}</div>}
             <button
             disabled={!stripe || loading}
-            className="text-wgite w-full p-5 bg-black mt-2 rounded-md font-bold disabled:opacity-50 disabled:animate-pulse"
+            className="text-white w-full p-5 bg-black mt-2 rounded-md font-bold disabled:opacity-50 disabled:animate-pulse"
             >
                 {!loading ? `Pay $${amount}` : 'Processing...'}
             </button>

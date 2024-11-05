@@ -14,26 +14,24 @@ export default function Pages() {
     <div className="flex flex-col">
       <FirstTopNav />
 
-      <div className="flex flex-col items-center pt-10">
+      <div id="home" className="flex flex-col items-center pt-10">
         <LandingPage />
       </div>
 
-      {/* Focus Description Section */}
-      <section className="py-12 bg-white">
+      <section id="focus" className="py-12 bg-white">
         <div className="container mx-auto px-4 rounded-2xl">
           <FocusDescription />
         </div>
       </section>
 
-      {/* About Us Section */}
-      <section className="py-16 bg-gray-100">
+      <section id="about" className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <AboutUs />
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-accent-light text-white">
+      <section id="testimonials" className="py-16 bg-accent-light text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-center text-3xl font-bold mb-8">What Our Clients Say</h2>
           <Testimonials />
@@ -41,13 +39,13 @@ export default function Pages() {
       </section>
 
       <div className="bg-gray-100">
-        <section className="bg-accent-light text-white">
+        <section id="donate" className="bg-accent-light text-white">
           <div className="container mx-auto px-4">
             <h2 className="text-center text-3xl font-bold pt-10 text-black italic ">Lets Make a Difference Together</h2>
             <DonationPage />
           </div>
         </section>
-        <section className="py-10 bg-accent-light text-white">
+        <section id="contact" className="py-10 bg-accent-light text-white">
           <div className="container mx-auto px-4">
             <ContactUs />
           </div>

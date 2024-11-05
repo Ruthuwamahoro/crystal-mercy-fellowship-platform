@@ -17,10 +17,10 @@ export function Testimonials() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % 3); // Adjust for continuous animation
-    }, 5000); // Move to the next set every 5 seconds
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % 3);
+    }, 5000);
 
-    return () => clearInterval(interval); // Cleanup interval on unmount
+    return () => clearInterval(interval);
   }, []);
 
   const getVisibleTestimonials = () => {
