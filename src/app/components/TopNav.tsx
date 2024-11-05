@@ -63,7 +63,6 @@ export function FirstTopNav() {
                 </div>
             </div>
 
-            {/* Main Navigation */}
             <div className={`flex items-center justify-between py-4 px-6 ${isScrolled ? 'py-2' : ''} transition-all duration-300 shadow-lg`}>
                 <div className="flex items-center space-x-4">
                     <div className='px-5'>
