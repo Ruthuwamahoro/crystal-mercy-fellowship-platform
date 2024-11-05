@@ -142,7 +142,7 @@ export const FloatingChatButton = () => {
   const [streamingMessage, setStreamingMessage] = useState('');
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(true);
-  const messagesEndRef = useRef(null);
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -152,9 +152,9 @@ export const FloatingChatButton = () => {
     scrollToBottom();
   }, [chatHistory, streamingMessage]);
 
-  const generateAIResponse = async (userMessage) => {
+  const generateAIResponse = async (userMessage: string) => {
     // Simulate typing time based on response length
-    const getTypingDelay = (text) => Math.min(text.length * 20, 2000);
+    const getTypingDelay = (text: string) => Math.min(text.length * 20, 2000);
 
     const responses = {
       'donation': {
@@ -198,7 +198,7 @@ export const FloatingChatButton = () => {
 
     const matchedKeyword = Object.keys(responses).find(key => 
       userMessage.toLowerCase().includes(key)
-    );
+    ) as keyof typeof responses;
 
     const response = matchedKeyword ? responses[matchedKeyword] : {
       text: "Thank you for reaching out! 🙏\n\n" +
@@ -259,12 +259,12 @@ export const FloatingChatButton = () => {
     </div>
   );
 
-  const handleEmojiClick = (emojiObj) => {
+  const handleEmojiClick = (emojiObj: { emoji: string }) => {
     setMessage(prev => prev + emojiObj.emoji);
     setShowEmojiPicker(false);
   };
 
-  const handleSendMessage = async (e) => {
+  const handleSendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!message.trim() || isProcessing) return;
 

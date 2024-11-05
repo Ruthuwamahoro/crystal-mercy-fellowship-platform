@@ -36,7 +36,7 @@ export function FirstTopNav() {
         'Contact Us': 'contact'
     };
 
-    const handleNavigationClick = (sectionId) => {
+    const handleNavigationClick = (sectionId: string) => {
         const section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
