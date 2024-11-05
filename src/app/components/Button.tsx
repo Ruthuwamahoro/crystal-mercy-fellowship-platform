@@ -1,6 +1,6 @@
 import { useTheme } from 'next-themes'
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, RefObject } from 'react';
 import { MessageCircle, X, Send, Smile, Heart } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import EmojiPicker from 'emoji-picker-react';
@@ -142,7 +142,7 @@ export const FloatingChatButton = () => {
   const [streamingMessage, setStreamingMessage] = useState('');
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(true);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef: RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -152,7 +152,6 @@ export const FloatingChatButton = () => {
   }, [chatHistory, streamingMessage]);
 
   const generateAIResponse = async (userMessage: string) => {
-    // Simulate typing time based on response length
     const getTypingDelay = (text: string) => Math.min(text.length * 20, 2000);
 
     const responses = {
